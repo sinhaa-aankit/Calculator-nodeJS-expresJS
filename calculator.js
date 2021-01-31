@@ -14,16 +14,20 @@ app.post("/", function(req,res){
 
 	var n1 = Number(req.body.Num1);
 	var n2 = Number(req.body.Num2);
+	var w = Number(req.body.weight);
+	var h = Number(req.body.height);
 
 	var add = n1+n2;
 	var sub = (n1-n2);
 	var mul = n1*n2;
 	var div = n1/n2;
+	var bmi = w / (w*h);
 
 	res.send("Addition is: " + add + 
 		"<br> Substraction is: " + sub +
 		"<br> Multiplication is: " + mul +
-		"<br> Division is: " + div 
+		"<br> Division is: " + div +
+		"<br> Your BMI is: " + bmi 
 		);
 });
 
